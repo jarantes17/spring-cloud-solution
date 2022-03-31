@@ -3,7 +3,6 @@ package cloud.example.orderservice.api.controller
 import cloud.example.orderservice.application.dto.request.TransactionRequest
 import cloud.example.orderservice.application.dto.response.TransactionResponse
 import cloud.example.orderservice.application.service.OrderService
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping

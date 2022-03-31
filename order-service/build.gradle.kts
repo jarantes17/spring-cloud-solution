@@ -23,3 +23,5 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+tasks.register("prepareKotlinBuildScriptModel"){}
