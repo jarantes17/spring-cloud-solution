@@ -1,19 +1,12 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    id("org.springframework.boot") version "2.6.5"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.6.10"
-    kotlin("plugin.spring") version "1.6.10"
-    kotlin("plugin.jpa") version "1.6.10"
+    id("org.springframework.boot")
+    kotlin("jvm")
+    kotlin("plugin.spring")
 }
 
-group = "cloud.example"
-version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_11
-
-repositories {
-    mavenCentral()
+allprojects {
+    group = "cloud.example"
+    version = "1.0.0"
 }
 
 dependencies {
@@ -26,13 +19,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "11"
-    }
+repositories {
+    mavenCentral()
 }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
+tasks.register("prepareKotlinBuildScriptModel"){}
