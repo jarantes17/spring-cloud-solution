@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     val pluginsVersion = "1.6.10"
 
-    id("org.springframework.boot") version "2.6.3" apply false
+    id("org.springframework.boot") version "2.6.5" apply false
     id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
 
     kotlin("jvm") version pluginsVersion apply false

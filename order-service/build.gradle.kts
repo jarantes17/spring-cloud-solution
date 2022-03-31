@@ -1,5 +1,3 @@
-val springBootVersion = "2.6.5"
-
 plugins {
     id("org.springframework.boot")
     kotlin("jvm")
