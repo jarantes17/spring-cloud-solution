@@ -1,11 +1,10 @@
 package cloud.example.paymentservice.adapters.inbound.controllers
 
-import cloud.example.paymentservice.adapters.dtos.PaymentDto
+import cloud.example.paymentservice.adapters.dtos.request.PaymentRequestDto
+import cloud.example.paymentservice.adapters.dtos.response.PaymentResponseDto
+import cloud.example.paymentservice.application.domain.Payment
 import cloud.example.paymentservice.application.services.PaymentService
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 
 @RestController
@@ -15,7 +14,12 @@ class PaymentController(
 ) {
 
     @PostMapping("/doPayment")
-    fun doPayment(@RequestBody paymentDto: PaymentDto): PaymentDto {
+    fun doPayment(@RequestBody paymentDto: PaymentRequestDto): PaymentResponseDto {
         return paymentService.doPayment(paymentDto)
+    }
+
+    @GetMapping("/{orderId}")
+    fun findPaymentHistoryByOrderId(@PathVariable orderId: Int): Payment {
+        return paymentService.findPaymentHistoryByOrderId(orderId)
     }
 }

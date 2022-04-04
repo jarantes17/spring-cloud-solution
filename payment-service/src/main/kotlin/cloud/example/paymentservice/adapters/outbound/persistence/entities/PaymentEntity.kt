@@ -7,7 +7,7 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "PAYMENT_TB")
-class PaymentEntity(
+data class PaymentEntity(
     @Id
     @GeneratedValue
     var paymentId: Int? = 0,
