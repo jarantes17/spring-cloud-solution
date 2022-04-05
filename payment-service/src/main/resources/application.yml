@@ -8,5 +8,5 @@ spring:
       enabled: true
   application:
     name: payment-service
-logging:
-  file: C:/Users/Basant.Hota/Desktop/oms.log
+#logging:
+#  file: C:/Users/Basant.Hota/Desktop/oms.log

@@ -1,11 +1,11 @@
 spring:
   application:
-    name: CONFIG-SERVER
+    name: config-server
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/jarantes17/cloud-config-server
+          uri: https://github.com/jarantes17/cloud-config-server.git
 
 server:
   port: 9196
