@@ -7,9 +7,8 @@ import cloud.example.orderservice.application.ports.outbound.OrderRepositoryPort
 import org.modelmapper.ModelMapper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
-import org.springframework.stereotype.Repository
 
-@Component("orderRespository")
+@Component("orderRepository")
 class OrderRepository : OrderRepositoryPort {
 
     @Autowired
